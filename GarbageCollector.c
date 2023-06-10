@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "garbage.h"
 
 
 
 //Declarar las variables del módulo
+
+
 
 int init_gc(int max_mem)
 {
