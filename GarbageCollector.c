@@ -4,12 +4,33 @@
 #include "garbage.h"
 
 //Declarar las variables del módulo
+// Cada bloque será una estructura con 4 datos: 
+typedef struct
+{
+	int id;						// identificador
+	int count_reference;		// contador de referencias
+	char name[];				// nombre del bloque
+	int size;					// tamaño del bloque
+} block;
 
+// Cada garbage colector será una estructura con 3 datos: 
+typedef struct 
+{
+	int memory;			// Cantidad de memoria a reservar
+	int available;		// Cantidad de memoria disponible 
+	int block; 			// Cantidad de bloques
+} garbageCollector;
 
+/********************************************************************/
 
 int init_gc(int max_mem)
 {
 	//TODO : reserva la memoria del tamaño que tiene max_mem
+	void* init_gc = malloc(sizeof(max_mem));
+	if(init_gc == NULL){
+		printf("Error: La memoria está llena");
+	} 
+	return init_gc;
 	
 }
 
