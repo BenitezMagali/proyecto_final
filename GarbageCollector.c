@@ -18,7 +18,7 @@ typedef struct
 {
 	int memory;			// Cantidad de memoria a reservar
 	int available;		// Cantidad de memoria disponible 
-	int block; 			// Cantidad de bloques
+	int count_block; 			// Cantidad de bloques
 } garbageCollector;
 
 /********************************************************************/
